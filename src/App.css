@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  
+  }
+  
+  body {
+    background: linear-gradient(135deg, #835cf9 50%, transparent 0, transparent 25%, aqua 0, aqua 50%, transparent 0, transparent 75%, black 0);
+  }

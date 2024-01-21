@@ -2,36 +2,28 @@ import { MdEmail } from "react-icons/md";
 import { FaTiktok } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import logo from '../../img/logo.png'
-import './style.css'
+import { Footer, FooterBrand, FooterCopyright, FooterDivider, FooterLink, FooterLinkGroup } from 'flowbite-react';
 
-export default function Footer() {
+export default function ComponentFooter() {
     return (
-        <footer >
-            <div className="footer">
-                <div className="logo-footer alinhamento">
-                    <img src={logo} className=" logo-fundo-escuro" />
-                    <p>Agencia e acessoria de Markting</p>
+        <Footer container>
+            <div className="w-full text-center">
+                <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
+                    <FooterBrand
+                        src="../../img/logo.png"
+                        alt=""
+                        name=""
+                    />
+                    <FooterLinkGroup>
+                        <FooterLink href="#">Politica de Privacidade</FooterLink>
+                        <FooterLink href="#"><FaInstagram /></FooterLink>
+                        <FooterLink href="#"><FaTiktok/></FooterLink>
+                        <FooterLink href="#"><MdEmail/></FooterLink>
+                    </FooterLinkGroup>
                 </div>
-                <div className="institucional alinhamento">
-                    <h3>Institucional</h3>
-                    <p>Home</p>
-                    <p>Sobre Nós</p>
-                    <p>Equipe</p>
-                </div>
-                <div className="contato-footer alinhamento">
-                    <h3>Contato</h3>
-                    <p><MdEmail /> exemplo@exemplo.com</p>
-                    <p><MdEmail /> exemplo@exemplo.com</p>
-                </div>
-                <div className="redes-sociais alinhamento">
-                    <h3>Nossas Redes</h3>
-                    <p>Siga-nos</p>
-                    <div className="icones-redes">
-                    <p><FaTiktok /></p>
-                    <p><FaInstagram /></p>
-                    </div>
-                </div>
+                <FooterDivider />
+                <FooterCopyright href="#" by="Salion™" year={2023} />
             </div>
-        </footer>
+        </Footer>
     )
 }

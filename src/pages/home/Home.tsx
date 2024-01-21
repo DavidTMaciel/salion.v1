@@ -9,6 +9,7 @@ import Footer from '../../components/footer/footer';
 import Content from '../../components/content';
 import LineTime from '../../components/lineTime';
 import './style.css'
+import ComponentFooter from '../../components/footer/footer';
 
 
 const solucoes = [
@@ -36,8 +37,8 @@ export default function Home() {
                         <div className="flex justify-center mt-8">
                             {solucoes.map((solucao) => (
                                 <div key={solucao.id} className="p-4 flex flex-col items-center">
-                                    <div className="circulo bg-black rounded-full p-2">
-                                        <img src={solucao.imagem} alt={solucao.titulo} className="w-16 h-16 object-cover rounded-full" />
+                                    <div className="circulo rounded-full p-2">
+                                        <img src={solucao.imagem} alt={solucao.titulo} className="w-16 h-16 object-cover rounded-full" id="sem-bordar" />
                                     </div>
                                     <h3 className="text-center font-bold text-lg mt-2">{solucao.titulo}</h3>
                                     <p className="text-center">{solucao.descricao}</p>
@@ -49,6 +50,7 @@ export default function Home() {
             </div>
             <Content />
             <LineTime />
+            <ComponentFooter />
         </div>
     );
 }

@@ -1,5 +1,10 @@
-#solucao{
+#solucao {
     font-size: 35px;
     font-weight: 900;
     font-family: 'Inter', sans-serif;
+}
+
+#sem-bordar {
+    background-color: white;
+    border: none;
 }
